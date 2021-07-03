@@ -1,5 +1,7 @@
 # Hangman game
 #
+#  Download words.txt from the repository to run this code.
+#
 #  Starts up an interactive game of Hangman.
 #
 #    * At the start of the game, let the user know how many 
