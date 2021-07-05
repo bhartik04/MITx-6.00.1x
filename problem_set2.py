@@ -13,8 +13,8 @@
 """
 
 
-balance=int(input('Enter Outstanding Balance:'))
-annualInterestRate=int(input('Enter Annual Interest Rate: '))
+balance=float(input('Enter Outstanding Balance:'))
+annualInterestRate=float(input('Enter Annual Interest Rate: '))
 
 
 
@@ -49,17 +49,17 @@ def compute(balance, annualInterestRate):
         if x>0:
             start=guess
             
-            ideal(start,end,total,air)
+            return ideal(start,end,total,air)
          
         elif x<=(-0.10):   
             end=guess
-            ideal(start,end,total,air)
+            return ideal(start,end,total,air)
             
         else:
-            print('Lowest Payment: ' +str(round(guess,2)))
+             return str(round(guess,2))
       
-    return ideal(start0,end0,balance,annualInterestRate)  
+     return ideal(start0,end0,balance,annualInterestRate)  
      
         
-compute(balance,annualInterestRate)
+print(compute(balance,annualInterestRate))
         
