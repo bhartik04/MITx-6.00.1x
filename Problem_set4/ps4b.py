@@ -158,20 +158,24 @@ def playGame(wordList):
         # If player chooses n, deal a new hand
         elif nre=='n': 
             # Ask player to choose between playing / have computer play
-            player= input("Enter u to have yourself play, c to have the computer play:")
-            print('')
             hand=dealHand(HAND_SIZE)
-            
-            # if player choose computer to play
-            if player=='c':
-                compPlayHand(hand, wordList, HAND_SIZE)
-            
-            # if player chooses themselves to play
-            elif player=='u':
-                playHand(hand, wordList, HAND_SIZE)
+            while True:
+                player= input("Enter u to have yourself play, c to have the computer play:")
+                print('')
                 
-            else:
-                print('Invalid command.')
+            
+                # if player choose computer to play
+                if player=='c':
+                    compPlayHand(hand, wordList, HAND_SIZE)
+                    break
+            
+                # if player chooses themselves to play
+                elif player=='u':
+                    playHand(hand, wordList, HAND_SIZE)
+                    break
+                    
+                else:
+                    print('Invalid command.')
                 
         else:
             print('Invalid Command.')                
